@@ -125,9 +125,9 @@ export default function Navbar() {
               <Image
                 src="/w2wadvisorlogo.png"
                 alt="Work Well Advisors Logo"
-                width={200}
-                height={80}
-                className="h-16 sm:h-20 w-auto object-contain"
+                width={280}
+                height={112}
+                className="h-24 sm:h-28 w-auto object-contain"
                 style={{ width: "auto", height: "100%" }}
                 priority
                 unoptimized
