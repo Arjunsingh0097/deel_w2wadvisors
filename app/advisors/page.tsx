@@ -5,18 +5,8 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 
 export default function Advisors() {
-  const coreStrengths = [
-    { letter: "C", word: "Connectedness", description: "Building meaningful relationships and connections" },
-    { letter: "R", word: "Responsibility", description: "Taking ownership and accountability" },
-    { letter: "A", word: "Achiever", description: "Driving results and excellence" },
-    { letter: "E", word: "Empathy", description: "Understanding and supporting others" },
-    { letter: "L", word: "Learner", description: "Continuously growing and adapting" },
-    { letter: "I", word: "Integrity", description: "Upholding ethical standards" },
-  ];
-
   const education = [
     { title: "PhD in Transpersonal Psychology", institution: "Sofia University, California", status: "Currently pursuing" },
-    { title: "Graduated in Philosophy", institution: "Miranda House (Delhi University)", status: "Completed" },
     { title: "MBA in HR", institution: "Maharishi University of Management, Iowa", status: "Completed" },
     { title: "Strategic Human Resource Practices", institution: "Cornell University", status: "Completed" },
     { title: "ICF Certified Coach", institution: "International Coach Federation", status: "Certified" },
@@ -25,7 +15,6 @@ export default function Advisors() {
   const professionalRoles = [
     { role: "CHRO", company: "Lenskart", period: "Last corporate role" },
     { role: "Asia Pacific Head of HR", company: "UnitedLex", period: "Startup experience" },
-    { role: "Head of HR", company: "ExclusivelyIn", period: "Startup experience" },
     { role: "Head of HR", company: "IBM Global Technology Services", period: "10 years at IBM Daksh" },
   ];
 
@@ -162,17 +151,7 @@ export default function Advisors() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                Suruchi Maitra is the Co-Founder of <span className="font-semibold text-gray-900">Artha School of Entrepreneurship</span>, a company focused on solving the problem of scale for entrepreneurs. Artha School of Entrepreneurship runs the Artha Scale Program to impact the lives of 1,00,000 founders across India over the next few years with the mission to create economic and social prosperity for entrepreneurs and their communities. Artha also offers coaching and consulting services to help individuals and organizations scale.
-              </motion.p>
-              
-              <motion.p 
-                className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                Her core strengths include Connectedness, Responsibility, Achiever, Empathy, Learner, and Integrity. She is an <span className="font-semibold text-gray-900">ICF (International Coach Federation) certified coach</span>. She coaches through an integral approach covering all aspects of human existence i.e., mental, emotional, physical, and spiritual.
+                Suruchi Maitra is the Co-Founder of <span className="font-semibold text-gray-900">Artha School of Entrepreneurship</span>, focused on solving the problem of scale for entrepreneurs. She is an <span className="font-semibold text-gray-900">ICF (International Coach Federation) certified coach</span> who coaches through an integral approach covering mental, emotional, physical, and spiritual aspects.
               </motion.p>
               
               <motion.p 
@@ -180,9 +159,9 @@ export default function Advisors() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
               >
-                &quot;Suruchi&apos;s intention statement defines her, and she does everything through its lens. Her intention is to live a life of gratitude, compassion, self-awareness, and oneness, thereby purposefully supporting others to create breakthroughs for themselves.&quot;
+                &quot;Suruchi&apos;s intention is to live a life of gratitude, compassion, self-awareness, and oneness, thereby purposefully supporting others to create breakthroughs for themselves.&quot;
               </motion.p>
             </motion.div>
           </div>
@@ -226,41 +205,14 @@ export default function Advisors() {
             </motion.h2>
             
             <motion.p 
-              className="text-lg lg:text-xl text-gray-700 mb-12 leading-relaxed max-w-4xl"
+              className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-4xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Over a career spanning <span className="font-bold text-gray-900">26 years</span> in growth companies, Suruchi has played several leadership roles and has served as a Head of HR since 2007 until she moved on to start Artha School of Entrepreneurship in 2021.
+              Over a career spanning <span className="font-bold text-gray-900">26 years</span> in growth companies, Suruchi has played several leadership roles and has served as a Head of HR since 2007 until she moved on to start Artha School of Entrepreneurship in 2021. Her last corporate role was the CHRO at Lenskart. She has worked with multiple startups including UnitedLex where she served as the Asia Pacific Head of HR, and IBM Daksh (multiple roles over 10 years including Head of HR for IBM Global Technology Services business).
             </motion.p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-              {professionalRoles.map((role, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-xl p-6 lg:p-8 shadow-lg border border-gray-200"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">{role.role}</h3>
-                      <p className="text-lg text-blue-600 font-semibold mb-1">{role.company}</p>
-                      <p className="text-sm text-gray-600">{role.period}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </section>
@@ -275,7 +227,7 @@ export default function Advisors() {
             transition={{ duration: 0.6 }}
           >
             <motion.h2 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-12 leading-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -284,88 +236,41 @@ export default function Advisors() {
               Education & Qualifications
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {education.map((edu, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-xl p-6 lg:p-8 shadow-lg border border-blue-200 relative overflow-hidden"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-full -mr-12 -mt-12 opacity-50"></div>
-                  <div className="relative z-10">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
-                    </div>
-                    <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-2">{edu.title}</h3>
-                    <p className="text-blue-600 font-semibold mb-2">{edu.institution}</p>
-                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                      edu.status === "Currently pursuing" 
-                        ? "bg-yellow-100 text-yellow-700" 
-                        : "bg-green-100 text-green-700"
-                    }`}>
-                      {edu.status}
-                    </span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Core Strengths Section */}
-      <section className="w-full bg-yellow-600 py-16 lg:py-24 px-4 sm:px-6 lg:px-8 rounded-2xl lg:rounded-none"
-        style={{
-          borderTopLeftRadius: 'clamp(1rem, 5vw, 30rem)',
-          borderTopRightRadius: 'clamp(1rem, 2vw, 4rem)',
-          borderBottomRightRadius: 'clamp(1rem, 5vw, 20rem)',
-          borderBottomLeftRadius: 'clamp(1rem, 10vw, 50rem)',
-        }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.h2 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-12 leading-tight text-center"
+            <motion.ul 
+              className="space-y-4 max-w-4xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Core Strengths
-            </motion.h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {coreStrengths.map((strength, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 lg:p-8 border border-white/20"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
-                      <span className="text-3xl font-extrabold text-yellow-600">{strength.letter}</span>
-                    </div>
-                    <h3 className="text-xl lg:text-2xl font-bold text-white">{strength.word}</h3>
-                  </div>
-                  <p className="text-white/90 text-sm lg:text-base">{strength.description}</p>
-                </motion.div>
-              ))}
-            </div>
+              {education.map((edu, index) => {
+                let text = "";
+                if (edu.status === "Currently pursuing") {
+                  text = `Currently pursuing a ${edu.title} from ${edu.institution}`;
+                } else if (edu.status === "Certified") {
+                  text = `${edu.title} - ${edu.institution}`;
+                } else if (edu.title.includes("Strategic")) {
+                  text = `Studied ${edu.title} at ${edu.institution}`;
+                } else {
+                  text = `Completed ${edu.title} from ${edu.institution}`;
+                }
+                return (
+                  <motion.li
+                    key={index}
+                    className="flex items-start gap-3 text-lg lg:text-xl text-gray-700"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  >
+                    <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{text}</span>
+                  </motion.li>
+                );
+              })}
+            </motion.ul>
           </motion.div>
         </div>
       </section>
