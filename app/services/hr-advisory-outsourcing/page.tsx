@@ -50,7 +50,7 @@ export default function HRAdvisoryOutsourcing() {
     {
       title: "Future of Work",
       description: "Introducing cutting-edge concepts and technologies related to the Future of Work, harnessing the potential of blended, hybrid, or remote work arrangements.",
-      image: "https://images.unsplash.com/photo-1521791136064-7986b292a6a0?w=800&h=600&fit=crop"
+      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop"
     }
   ];
 
@@ -498,6 +498,7 @@ export default function HRAdvisoryOutsourcing() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-purple-600/40 to-transparent"></div>
                   </div>
@@ -568,6 +569,7 @@ export default function HRAdvisoryOutsourcing() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 50vw"
+                      unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-purple-600/40 to-transparent"></div>
                   </div>
