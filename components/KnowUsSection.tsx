@@ -30,7 +30,7 @@ export default function KnowUsSection() {
         </svg>
       ),
       label: "Phone",
-      detail: "+91 74286 98688",
+      detail: "+91 92058 38443",
     },
   ];
 
