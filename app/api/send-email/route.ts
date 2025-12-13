@@ -32,12 +32,14 @@ export async function POST(request: NextRequest) {
     }
 
     // Log configuration (without password) for debugging
+    // Always log in production to help debug issues
     console.log("SMTP Configuration:", {
       host: smtpHost,
       port: smtpPort,
       user: smtpUser,
       passwordSet: !!smtpPassword,
       passwordLength: smtpPassword.length,
+      environment: process.env.NODE_ENV,
     });
 
     // Create transporter with SMTP configuration for GoDaddy email
@@ -62,8 +64,8 @@ export async function POST(request: NextRequest) {
       connectionTimeout: 30000, // 30 seconds
       greetingTimeout: 30000,
       socketTimeout: 30000,
-      debug: process.env.NODE_ENV === "development", // Enable debug in development
-      logger: process.env.NODE_ENV === "development", // Enable logging in development
+      debug: false, // Set to true for detailed SMTP debugging
+      logger: true, // Always log to help debug production issues
     });
 
     // Verify connection before sending
@@ -154,12 +156,19 @@ You can reply directly to this email to respond to ${name}.
       { status: 200 }
     );
   } catch (error: any) {
+    // Always log detailed errors in production for debugging
     console.error("Error sending email:", error);
     console.error("Error details:", {
       message: error.message,
       code: error.code,
       command: error.command,
       response: error.response,
+      stack: error.stack,
+      environment: process.env.NODE_ENV,
+      smtpHost: process.env.SMTP_HOST || "smtpout.secureserver.net",
+      smtpPort: process.env.SMTP_PORT || "587",
+      smtpUser: process.env.SMTP_USER || "info@w2wadvisors.in",
+      passwordSet: !!process.env.SMTP_PASSWORD,
     });
     
     // Provide user-friendly error message
