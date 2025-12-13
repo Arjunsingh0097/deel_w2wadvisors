@@ -3,7 +3,17 @@ import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    let body;
+    try {
+      body = await request.json();
+    } catch (jsonError: any) {
+      console.error("JSON parsing error:", jsonError);
+      return NextResponse.json(
+        { error: "Invalid request format" },
+        { status: 400 }
+      );
+    }
+    
     const { name, email, phone, companyName, employeeSize, services, message } = body;
 
     // Validate required fields
@@ -58,7 +68,7 @@ export async function POST(request: NextRequest) {
       },
       tls: {
         rejectUnauthorized: false,
-        ciphers: "SSLv3",
+        // Remove ciphers restriction for better compatibility
       },
       requireTLS: !isSecure, // Require STARTTLS only if not using SSL
       connectionTimeout: 30000, // 30 seconds
@@ -181,17 +191,30 @@ You can reply directly to this email to respond to ${name}.
       errorMessage = "Connection timed out. Please try again later.";
     }
     
-    return NextResponse.json(
-      { 
-        error: errorMessage, 
-        details: process.env.NODE_ENV === "development" ? {
-          message: error.message,
-          code: error.code,
-          command: error.command,
-        } : undefined 
-      },
-      { status: 500 }
-    );
+    // Always return a proper JSON response, even if there's an error
+    try {
+      return NextResponse.json(
+        { 
+          error: errorMessage, 
+          details: process.env.NODE_ENV === "development" ? {
+            message: error.message,
+            code: error.code,
+            command: error.command,
+          } : undefined 
+        },
+        { status: 500 }
+      );
+    } catch (responseError: any) {
+      // Fallback if even the error response fails
+      console.error("Failed to send error response:", responseError);
+      return new NextResponse(
+        JSON.stringify({ error: "Internal server error" }),
+        { 
+          status: 500,
+          headers: { "Content-Type": "application/json" }
+        }
+      );
+    }
   }
 }
 
