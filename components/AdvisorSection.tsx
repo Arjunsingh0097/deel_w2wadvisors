@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function AdvisorSection() {
   return (
@@ -21,7 +23,7 @@ export default function AdvisorSection() {
           whileHover={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            {/* Left Section - Blank */}
+            {/* Left Section - Image */}
             <motion.div
               className="relative h-64 lg:h-auto min-h-[400px] bg-blue-100 overflow-hidden"
               initial={{ opacity: 0, x: -50 }}
@@ -32,34 +34,50 @@ export default function AdvisorSection() {
               {/* Decorative overlay */}
               <div className="absolute inset-0 bg-blue-200/20"></div>
               
-              {/* Blank space */}
+              {/* Image placeholder - replace with actual image */}
               <div className="relative w-full h-full flex items-center justify-center">
-                {/* Floating decorative elements */}
                 <motion.div
-                  className="absolute top-10 right-10 w-20 h-20 bg-blue-300 rounded-full opacity-30 blur-xl"
-                  animate={{
-                    y: [0, -20, 0],
-                    scale: [1, 1.2, 1],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                ></motion.div>
-                <motion.div
-                  className="absolute bottom-10 left-10 w-16 h-16 bg-blue-200 rounded-full opacity-30 blur-xl"
-                  animate={{
-                    y: [0, 20, 0],
-                    scale: [1, 1.3, 1],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                ></motion.div>
+                  className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Image
+                    src="/suchi_mitra.jpeg"
+                    alt="Suruchi Maitra - Our Advisor"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 256px, 320px"
+                  />
+                  {/* Subtle overlay on image */}
+                  <div className="absolute inset-0 bg-blue-500/10"></div>
+                </motion.div>
               </div>
+
+              {/* Floating decorative elements */}
+              <motion.div
+                className="absolute top-10 right-10 w-20 h-20 bg-blue-300 rounded-full opacity-30 blur-xl"
+                animate={{
+                  y: [0, -20, 0],
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              ></motion.div>
+              <motion.div
+                className="absolute bottom-10 left-10 w-16 h-16 bg-blue-200 rounded-full opacity-30 blur-xl"
+                animate={{
+                  y: [0, 20, 0],
+                  scale: [1, 1.3, 1],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              ></motion.div>
             </motion.div>
 
             {/* Right Section - Text Content */}
@@ -77,7 +95,7 @@ export default function AdvisorSection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <h2 className="text-4xl lg:text-5xl font-bold text-blue-700 mb-3">
-                  Our Team
+                  Our Advisor
                 </h2>
                 <motion.div
                   className="w-20 h-1 bg-blue-600 rounded-full mb-6"
@@ -95,17 +113,7 @@ export default function AdvisorSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                At <span className="font-semibold text-gray-900">Work Well Advisors</span>, we are a team of seasoned HR professionals with over 15 years of collective experience across diverse industries and global markets. Our team brings together expertise in payroll management, staffing solutions, compliance, recruitment, and HR technology to deliver comprehensive solutions that drive organizational success.
-              </motion.p>
-
-              <motion.p
-                className="text-gray-700 leading-relaxed mb-4 text-base lg:text-lg"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-              >
-                Our dedicated professionals are committed to understanding your unique business needs and providing tailored HR solutions that enhance operational efficiency, ensure compliance, and empower your workforce. With a focus on excellence, innovation, and client satisfaction, we work collaboratively to transform your HR operations and accelerate your journey to organizational excellence.
+                <span className="font-semibold text-gray-900">Suruchi Maitra</span> is the Co-Founder of Artha School of Entrepreneurship, a company focused on solving the problem of scale for entrepreneurs. Artha School of Entrepreneurship runs the Artha Scale Program to impact the lives of 1,00,000 founders across India over the next few years with the mission to create economic and social prosperity for entrepreneurs and their communities. Artha also offers coaching and consulting services to help individuals and organizations scale.
               </motion.p>
 
               <motion.p
@@ -113,10 +121,51 @@ export default function AdvisorSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+              >
+                Suruchi is currently pursuing a PhD in Transpersonal Psychology from Sofia University, California and has graduated in Philosophy from Miranda House (Delhi University) and completed her MBA in HR from Maharishi University of Management, Iowa. She also studied Strategic Human Resource Practices at Cornell University.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                Partner with Work Well Advisors and experience the difference that a knowledgeable, experienced, and dedicated team can make for your organization. We are here to support your growth, manage your talent needs, and help you achieve your business objectives.
-              </motion.p>
+                <Link href="/advisors">
+                  <motion.button
+                    className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 w-fit group relative overflow-hidden hover:bg-blue-700"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span className="relative z-10 flex items-center gap-2">
+                      Know More
+                      <motion.svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        initial={{ x: 0 }}
+                        whileHover={{ x: 5 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </motion.svg>
+                    </span>
+                    <motion.div
+                      className="absolute inset-0 bg-blue-700"
+                      initial={{ x: "-100%" }}
+                      whileHover={{ x: 0 }}
+                      transition={{ duration: 0.3 }}
+                    ></motion.div>
+                  </motion.button>
+                </Link>
+              </motion.div>
 
               {/* Decorative elements */}
               <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-200 rounded-full blur-2xl opacity-30 -mr-16 -mb-16"></div>

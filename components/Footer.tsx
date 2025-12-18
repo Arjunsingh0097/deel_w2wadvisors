@@ -16,6 +16,7 @@ export default function Footer() {
 
   const companyLinks = [
     { name: "About Us", href: "/about" },
+    { name: "Our Advisors", href: "/advisors" },
     { name: "Contact Us", href: "/#hero" },
   ];
 
@@ -58,7 +59,7 @@ export default function Footer() {
             <div className="mb-6 flex items-start">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/w2wadvisorlogo.png"
+                  src="/logo.png"
                   alt="Work Well Advisors Logo"
                   width={200}
                   height={80}
@@ -213,7 +214,7 @@ export default function Footer() {
                 <div>
                   <p className="text-gray-400 text-xs mb-1">Address</p>
                   <p className="text-white text-sm leading-relaxed">
-                    Plot No 396 Street No 08, Sector 45<br />Noida, Uttar Pradesh. 201301
+                    246 2nd Floor JMD Megapolis<br />Sector 47 Gurgaom
                   </p>
                 </div>
               </motion.li>

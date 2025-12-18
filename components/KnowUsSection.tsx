@@ -21,7 +21,7 @@ export default function KnowUsSection() {
         </svg>
       ),
       label: "Address",
-      detail: "Plot No 396 Street No 08, Sector 45 Noida, Uttar Pradesh. 201301",
+      detail: "246 2nd Floor JMD Megapolis Sector 47 Gurgaom",
     },
     {
       icon: (
