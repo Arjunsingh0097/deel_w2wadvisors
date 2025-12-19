@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function AdvisorSection() {
@@ -23,7 +22,7 @@ export default function AdvisorSection() {
           whileHover={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            {/* Left Section - Image */}
+            {/* Left Section - Image (Blank for now) */}
             <motion.div
               className="relative h-64 lg:h-auto min-h-[400px] bg-blue-100 overflow-hidden"
               initial={{ opacity: 0, x: -50 }}
@@ -34,23 +33,9 @@ export default function AdvisorSection() {
               {/* Decorative overlay */}
               <div className="absolute inset-0 bg-blue-200/20"></div>
               
-              {/* Image placeholder - replace with actual image */}
+              {/* Blank space - image to be added later */}
               <div className="relative w-full h-full flex items-center justify-center">
-                <motion.div
-                  className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <Image
-                    src="/suchi_mitra.jpeg"
-                    alt="Suruchi Maitra - Our Advisor"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 256px, 320px"
-                  />
-                  {/* Subtle overlay on image */}
-                  <div className="absolute inset-0 bg-blue-500/10"></div>
-                </motion.div>
+                {/* Empty space for future image */}
               </div>
 
               {/* Floating decorative elements */}
@@ -95,7 +80,7 @@ export default function AdvisorSection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <h2 className="text-4xl lg:text-5xl font-bold text-blue-700 mb-3">
-                  Our Advisor
+                  Our Team
                 </h2>
                 <motion.div
                   className="w-20 h-1 bg-blue-600 rounded-full mb-6"
@@ -113,7 +98,7 @@ export default function AdvisorSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <span className="font-semibold text-gray-900">Suruchi Maitra</span> is the Co-Founder of Artha School of Entrepreneurship, a company focused on solving the problem of scale for entrepreneurs. Artha School of Entrepreneurship runs the Artha Scale Program to impact the lives of 1,00,000 founders across India over the next few years with the mission to create economic and social prosperity for entrepreneurs and their communities. Artha also offers coaching and consulting services to help individuals and organizations scale.
+                At Work Well Advisors, our team is comprised of experienced HR professionals dedicated to delivering exceptional solutions. With over 15 years of collective experience, we bring together expertise in payroll management, staffing, compliance, recruitment, and HR automation to serve our clients with excellence.
               </motion.p>
 
               <motion.p
@@ -123,7 +108,7 @@ export default function AdvisorSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
-                Suruchi is currently pursuing a PhD in Transpersonal Psychology from Sofia University, California and has graduated in Philosophy from Miranda House (Delhi University) and completed her MBA in HR from Maharishi University of Management, Iowa. She also studied Strategic Human Resource Practices at Cornell University.
+                Our team is committed to understanding your unique business needs and providing tailored HR solutions that drive growth and success. We combine industry knowledge with innovative approaches to help organizations optimize their human resources and achieve their strategic goals.
               </motion.p>
 
               <motion.div
