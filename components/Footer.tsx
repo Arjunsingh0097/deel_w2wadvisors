@@ -214,7 +214,7 @@ export default function Footer() {
                 <div>
                   <p className="text-gray-400 text-xs mb-1">Address</p>
                   <p className="text-white text-sm leading-relaxed">
-                    246 2nd Floor JMD Megapolis<br />Sector 47 Gurgaom
+                    Plot No 396 Street No 08, Sector 45 Noida, Uttar Pradesh. 201301
                   </p>
                 </div>
               </motion.li>
