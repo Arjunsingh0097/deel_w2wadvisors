@@ -280,18 +280,6 @@ export default function Navbar() {
                 </div>
       )}
     </div>
-
-            <Link
-              href="/advisors"
-              className={`px-3 py-2 text-sm font-semibold transition-colors duration-200 ${
-                isActive("/advisors")
-                  ? "text-gray-900"
-                  : "text-gray-500 hover:text-gray-900"
-              }`}
-              style={{ letterSpacing: '0.01em', fontWeight: 600 }}
-            >
-              Advisors
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -469,18 +457,6 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-
-    <Link
-              href="/advisors"
-              className={`block px-3 py-2 rounded-md text-base font-medium ${
-                isActive("/advisors")
-                  ? "bg-gray-100 text-gray-900"
-                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-              }`}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Advisors
-    </Link>
           </div>
         </div>
       )}
